@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+    <top.leefeng.datepicker.DatePickerView
+        android:id="@+id/datePickerView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:dpvBackgroundColor="#ffffff"
+        app:dpvDateEnableAlpha="true"
+        app:dpvDateEnd="2021-05-05"
+        app:dpvDatePaddingEnd="75dp"
+        app:dpvDatePaddingStart="75dp"
+        app:dpvDatePosition="2021-02-03"
+        app:dpvDateSize="7"
+        app:dpvDateStart="1995-01-02"
+        app:dpvDateTextColor="#000"
+        app:dpvDateTextSideColor="#f00"
+        app:dpvDateTextSize="24dp"
+        app:dpvLineColor="#33000000"
+        app:dpvLineWidth="1px"
+        app:dpvUnitMarginStart="10dp"
+        app:dpvUnitScroll="true"
+        app:dpvUnitTextColor="@color/black"
+        app:dpvUnitTextSize="20dp"
+        app:dpvPaddingTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/simplePicker" />
+
+    <TextView
+        android:id="@+id/dateResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/datePickerView"
+        app:layout_constraintStart_toStartOf="@id/datePickerView"
+        app:layout_constraintTop_toTopOf="@id/datePickerView" />
+
+    <top.leefeng.datepicker.SimplePickerView
+        android:id="@+id/simplePicker"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/datePickerView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spvLineColor="#33000000"
+        app:spvLineWidth="1dp" />
+
+    <TextView
+        android:id="@+id/simpleResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/simplePicker"
+        app:layout_constraintStart_toStartOf="@id/simplePicker"
+        app:layout_constraintTop_toTopOf="@id/simplePicker" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
